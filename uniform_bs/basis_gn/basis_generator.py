@@ -3,7 +3,7 @@
 """
 from typing import Tuple
 
-from mp_pytorch.phase_gn.phase_generator import *
+from ..phase_gn.phase_generator import *
 
 
 class BasisGenerator(ABC):

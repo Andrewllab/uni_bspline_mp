@@ -4,7 +4,6 @@ from uniform_bs.basis_gn import LinearPhaseGenerator
 from uniform_bs.basis_gn import UniBSplineBasis
 import matplotlib.pyplot as plt
 
-# todo test
 ph_gn = LinearPhaseGenerator()
 b_basis = UniBSplineBasis(ph_gn, degree_p=5)
 b_basis.show_basis(plot=True)
@@ -13,6 +12,6 @@ bs = b_basis.basis(times)
 vb = b_basis.vel_basis(times)
 ab = b_basis.acc_basis(times)
 
-for i in range(b_basis.num_basis-1):
-    plt.plot(vb[:, i].numpy())
+for i in range(b_basis.num_ctrlp-2):
+    plt.plot(ab[:, i].numpy())
 plt.show()
